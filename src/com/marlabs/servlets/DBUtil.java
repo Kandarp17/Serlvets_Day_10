@@ -12,7 +12,7 @@ public class DBUtil {
 		Connection conn= null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String connection = "jdbc:mysql://18.217.17.251:3306/Employee";
+			String connection = "jdbc:mysql://18.217.17.251:3306/employee";
 			conn=DriverManager.getConnection
 					(connection,"root","root");
 		}catch(ClassNotFoundException e){
