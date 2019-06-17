@@ -11,9 +11,10 @@ public class DBUtil {
 	public static Connection getConnection() {
 		Connection conn= null;
 		try {
-			Class.forName("oracle.jdbc.driver.oracleDriver");
+			Class.forName("oom.mysql.jdbc.Driver");
+			String connection = "jdbc:mysql://3.14.65.60:3306/Employee";
 			conn=DriverManager.getConnection
-					("jdbc:oracle:thin:@localhost:1521:xe","System","root");
+					(connection,"root","root");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 			//LOG.fatal("Message");
