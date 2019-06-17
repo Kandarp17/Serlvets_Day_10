@@ -11,7 +11,7 @@ public class DBUtil {
 	public static Connection getConnection() {
 		Connection conn= null;
 		try {
-			Class.forName("oom.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			String connection = "jdbc:mysql://3.14.65.60:3306/Employee";
 			conn=DriverManager.getConnection
 					(connection,"root","root");
