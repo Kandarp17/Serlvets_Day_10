@@ -60,7 +60,7 @@ public class RegistrationServlet1 extends HttpServlet {
 		System.out.println("I am from registrationServlets doPost");
 		int empNumber=Integer.parseInt(request.getParameter("empNumber"));
 		String empName=request.getParameter("empName");
-		double empSalary=Double.parseDouble(request.getParameter("empSalary"));
+		double empSalary=Integer.parseInt(request.getParameter("empSalary"));
 		int departmentNumber= Integer.parseInt(request.getParameter("DepartmentNumber"));
 		response.setContentType("text/html");
 		
