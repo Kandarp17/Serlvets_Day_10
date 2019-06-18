@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ReuestHeaderInfoServlet
+ * Servlet implementation class RequestHeaderInfoServlet
  */
-public class ReuestHeaderInfoServlet extends HttpServlet {
+public class RequestHeaderInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ReuestHeaderInfoServlet() {
+    public RequestHeaderInfoServlet() {
         super();
         // TODO Auto-generated constructor stub
         System.out.println("I am from servlet constructor");
