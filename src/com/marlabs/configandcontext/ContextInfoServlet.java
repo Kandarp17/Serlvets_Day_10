@@ -82,7 +82,7 @@ public class ContextInfoServlet extends HttpServlet {
 		out.println("<br><hr>");
 		out.println("<h3>servlet context get all Attribute </h3><br>");
 		java.util.Enumeration<String> e1=context.getAttributeNames();
-		while(e1.hasMoreElements()) {
+		while(e1 .hasMoreElements()) {
 			out.println("<br>");
 			String name= e1.nextElement();
 			String value= context.getAttribute(name).toString();

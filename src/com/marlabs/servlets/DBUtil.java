@@ -11,10 +11,11 @@ public class DBUtil {
 	public static Connection getConnection() {
 		Connection conn= null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String connection = "jdbc:mysql://18.217.17.251:3306/employee";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String connection = "jdbc:mysql://18.188.53.157:3306/employee?serverTimezone=EST5EDT";
 			conn=DriverManager.getConnection
 					(connection,"root","root");
+			conn.setAutoCommit(false);
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 			//LOG.fatal("Message");
