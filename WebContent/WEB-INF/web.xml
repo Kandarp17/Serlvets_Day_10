@@ -24,4 +24,14 @@
     <servlet-name>RegistrationFailure</servlet-name>
     <url-pattern>/RegistrationFailure</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReuestHeaderInfoServlet</display-name>
+    <servlet-name>ReuestHeaderInfoServlet</servlet-name>
+    <servlet-class>com.marlabs.requestinfo.ReuestHeaderInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReuestHeaderInfoServlet</servlet-name>
+    <url-pattern>/ReuestHeaderInfoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
