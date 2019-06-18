@@ -60,7 +60,7 @@ public class ConfigInfoServlet extends HttpServlet {
 		while(e.hasMoreElements()) {
 			out.println("<br>");
 			String name= e.nextElement();
-			String value= request.getParameter(name);
+			String value= config.getInitParameter(name);
 			out.println(name+" : "+value);
 		}
 		out.println("</html></body>");
