@@ -65,6 +65,7 @@ public class ContextInfoServlet extends HttpServlet {
 		list.add("User3");
 		list.add("User4");
 		context.setAttribute("userList", list);
+		context.setAttribute("UserCount", list.size());
 		
 		
 		//get Attribute for context object
@@ -76,6 +77,16 @@ public class ContextInfoServlet extends HttpServlet {
 		while(iterator.hasNext()) {
 			out.println("<br>");
 			out.println(iterator.next());
+		}
+		//get attribute for all the attributes
+		out.println("<br><hr>");
+		out.println("<h3>servlet context get all Attribute </h3><br>");
+		java.util.Enumeration<String> e1=context.getAttributeNames();
+		while(e.hasMoreElements()) {
+			out.println("<br>");
+			String name= e1.nextElement();
+			String value= context.getAttribute(name).toString();
+			out.println(name+" : "+value);
 		}
 		out.println("</html></body>");
 	}
