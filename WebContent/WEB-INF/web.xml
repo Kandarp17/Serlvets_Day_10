@@ -26,12 +26,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ReuestHeaderInfoServlet</display-name>
-    <servlet-name>ReuestHeaderInfoServlet</servlet-name>
-    <servlet-class>com.marlabs.requestinfo.ReuestHeaderInfoServlet</servlet-class>
+    <display-name>RequestHeaderInfoServlet</display-name>
+    <servlet-name>RequestHeaderInfoServlet</servlet-name>
+    <servlet-class>com.marlabs.requestinfo.RequestHeaderInfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ReuestHeaderInfoServlet</servlet-name>
-    <url-pattern>/ReuestHeaderInfoServlet</url-pattern>
+    <servlet-name>RequestHeaderInfoServlet</servlet-name>
+    <url-pattern>/RequestHeaderInfoServlet</url-pattern>
   </servlet-mapping>
 </web-app>
