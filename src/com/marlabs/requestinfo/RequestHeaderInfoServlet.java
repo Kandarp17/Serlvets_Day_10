@@ -33,6 +33,7 @@ public class RequestHeaderInfoServlet extends HttpServlet {
 		out.println("<h3>Header Information Example</h3>");
 		java.util.Enumeration<String> e=request.getHeaderNames();
 		while(e.hasMoreElements()) {
+			out.println("<br>");
 			String name= e.nextElement();
 			String value= request.getHeader(name);
 			out.println(name+" : "+value);
@@ -42,6 +43,7 @@ public class RequestHeaderInfoServlet extends HttpServlet {
 		out.println("<h3>Header Information Example</h3>");
 		e=request.getParameterNames();
 		while(e.hasMoreElements()) {
+			out.println("<br>");
 			String name= e.nextElement();
 			String value= request.getParameter(name);
 			out.println(name+" : "+value);

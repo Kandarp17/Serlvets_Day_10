@@ -34,4 +34,29 @@
     <servlet-name>RequestHeaderInfoServlet</servlet-name>
     <url-pattern>/RequestHeaderInfoServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConfigInfoServlet</display-name>
+    <servlet-name>ConfigInfoServlet</servlet-name>
+    <servlet-class>com.marlabs.configandcontext.ConfigInfoServlet</servlet-class>
+    <init-param>
+      <description>used to calculate HRA</description>
+      <param-name>HRA</param-name>
+      <param-value>0.04</param-value>
+    </init-param>
+    <init-param>
+      <description>Basic salary</description>
+      <param-name>Basic</param-name>
+      <param-value>9850</param-value>
+    </init-param>
+    <init-param>
+      <description>DA calculation</description>
+      <param-name>DA</param-name>
+      <param-value>0.4</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfigInfoServlet</servlet-name>
+    <url-pattern>/ConfigInfoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
