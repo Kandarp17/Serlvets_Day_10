@@ -37,7 +37,7 @@ public class ConfigInfoServlet extends HttpServlet {
 		out.println("<br>");
 		out.println("UserName: "+userName);
 		out.println("<br>");
-		out.println("<UserPassword: "+userPassword);
+		out.println("UserPassword: "+userPassword);
 		out.println("<br>");
 		ServletConfig config=getServletConfig();
 		double hra= Double.parseDouble(config.getInitParameter("HRA"));
