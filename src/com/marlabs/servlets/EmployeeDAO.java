@@ -12,6 +12,7 @@ public class EmployeeDAO {
 		Boolean result=false;
 		try {
 			connection = DBUtil.getConnection();
+			System.out.println(connection);
 			final String insertQuery = "insert into emp2 values(?,?,?,?)";
 			pstStatement = connection.prepareStatement(insertQuery); // Step -3
 			// Step -4 Write And Execute SQL Query
