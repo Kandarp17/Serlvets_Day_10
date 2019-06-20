@@ -34,6 +34,7 @@ public class EmployeeMoreDetails extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println(request.getAttribute("empQualification").toString());
 		String qualification= request.getAttribute("empQualification").toString();
 		String designation= request.getAttribute("empDesignation").toString();
 		HttpSession session=request.getSession(false);
