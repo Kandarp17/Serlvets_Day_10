@@ -39,7 +39,7 @@ public class EmployeeMoreDetails extends HttpServlet {
 		HttpSession session=request.getSession(false);
 		session.setAttribute("empQualification", qualification);
 		session.setAttribute("empDesignation", designation);
-		response.sendRedirect("employeeDetails.jsp");
+		response.sendRedirect("./employeeDetails.jsp");
 	}
 
 }

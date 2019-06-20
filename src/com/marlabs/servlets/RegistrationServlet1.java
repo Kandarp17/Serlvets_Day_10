@@ -70,7 +70,7 @@ public class RegistrationServlet1 extends HttpServlet {
 		session.setAttribute("empSalary", empSalary);
 		session.setAttribute("departmentNumber", departmentNumber);
 		System.out.println(session.getId());
-		response.sendRedirect("/emplopyeeMoreDetails.html");
+		response.sendRedirect("./emplopyeeMoreDetails.html");
 		
 		//JDBC logic
 //		EmployeeVO valueObject=new EmployeeVO(); 
