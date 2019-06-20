@@ -2,24 +2,24 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Servlets_Day_10</display-name>
   <context-param>
-  	<param-name>Driver_Url_Name</param-name>
-  	<param-value>jdbc:mysql://18.217.17.251:3306/employee</param-value>
+    <param-name>Driver_Url_Name</param-name>
+    <param-value>jdbc:mysql://18.217.17.251:3306/employee</param-value>
   </context-param>
   <context-param>
-  	<param-name>Driver_Class_Name</param-name>
-  	<param-value>com.mysql.jdbc.Driver</param-value>
+    <param-name>Driver_Class_Name</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
   </context-param>
   <context-param>
-  	<param-name>DB_Username</param-name>
-  	<param-value>root</param-value>
+    <param-name>DB_Username</param-name>
+    <param-value>root</param-value>
   </context-param>
   <context-param>
-  	<param-name>DB_UserPassword</param-name>
-  	<param-value>root</param-value>
+    <param-name>DB_UserPassword</param-name>
+    <param-value>root</param-value>
   </context-param>
   <context-param>
-  	<param-name>Driver_Class_Name</param-name>
-  	<param-value>com.mysql.jdbc.Driver</param-value>
+    <param-name>Driver_Class_Name</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
   </context-param>
   <welcome-file-list>
     <welcome-file>newEmployeeInsert.html</welcome-file>
@@ -88,5 +88,15 @@
   <servlet-mapping>
     <servlet-name>ContextInfoServlet</servlet-name>
     <url-pattern>/ContextInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeMoreDetails</display-name>
+    <servlet-name>EmployeeMoreDetails</servlet-name>
+    <servlet-class>com.marlabs.sessionexample.EmployeeMoreDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeMoreDetails</servlet-name>
+    <url-pattern>/EmployeeMoreDetails</url-pattern>
   </servlet-mapping>
 </web-app>
