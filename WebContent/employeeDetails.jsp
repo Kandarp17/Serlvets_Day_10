@@ -11,7 +11,7 @@
 
 int empNum=Integer.parseInt(session.getAttribute("empNumber").toString());
 String empName=session.getAttribute("empName").toString();
-double empSalary=Integer.parseInt(session.getAttribute("empSalary").toString());
+double empSalary=Double.parseDouble(session.getAttribute("empSalary").toString());
 int departmentNumber=Integer.parseInt(session.getAttribute("departmentNumber").toString());
 String empQualification=session.getAttribute("empQualification").toString();
 String empDesignation=session.getAttribute("empDesignation").toString();
