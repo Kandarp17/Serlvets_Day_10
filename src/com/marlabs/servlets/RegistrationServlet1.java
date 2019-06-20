@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -63,28 +64,35 @@ public class RegistrationServlet1 extends HttpServlet {
 		double empSalary=Integer.parseInt(request.getParameter("empSalary"));
 		int departmentNumber= Integer.parseInt(request.getParameter("DepartmentNumber"));
 		response.setContentType("text/html");
+		HttpSession session =request.getSession();
+		session.setAttribute("empNumber", empNumber);
+		session.setAttribute("empName", empName);
+		session.setAttribute("empSalary", empSalary);
+		session.setAttribute("departmentNumber", departmentNumber);
+		System.out.println(session.getId());
+		response.sendRedirect("/emplopyeeMoreDetails.html");
 		
 		//JDBC logic
-		EmployeeVO valueObject=new EmployeeVO(); 
-		valueObject.setEmpNumber(empNumber);
-		valueObject.setEmpName(empName);
-		valueObject.setEmpSalary(empSalary);
-		valueObject.setDepartmentNumber(departmentNumber);
-		boolean result=false;
-		RequestDispatcher dispatcher=null;
-		try {
-			result = employeeDAO.registerEmployee(valueObject);
-			if(result) {
-				dispatcher=request.getRequestDispatcher("RegistrationSuccess.jsp");
-				dispatcher.forward(request, response);
-				
-			}
-		} catch (SQLException e) {
-			dispatcher=request.getRequestDispatcher("RegistrationFailure.jsp");
-			request.setAttribute("message",e.getMessage());
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		EmployeeVO valueObject=new EmployeeVO(); 
+//		valueObject.setEmpNumber(empNumber);
+//		valueObject.setEmpName(empName);
+//		valueObject.setEmpSalary(empSalary);
+//		valueObject.setDepartmentNumber(departmentNumber);
+//		boolean result=false;
+//		RequestDispatcher dispatcher=null;
+//		try {
+//			result = employeeDAO.registerEmployee(valueObject);
+//			if(result) {
+//				dispatcher=request.getRequestDispatcher("RegistrationSuccess.jsp");
+//				dispatcher.forward(request, response);
+//				
+//			}
+//		} catch (SQLException e) {
+//			dispatcher=request.getRequestDispatcher("RegistrationFailure.jsp");
+//			request.setAttribute("message",e.getMessage());
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 	}
 

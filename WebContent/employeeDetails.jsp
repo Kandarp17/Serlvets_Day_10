@@ -22,6 +22,8 @@ Employee Details
 <hr>
 
 <font color="green" size="4">
+SessionID: <%=session.getId() %>
+
 empNumber: <%=empNum %>
 <br>
 empName: <%=empName%>
